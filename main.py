@@ -21,5 +21,13 @@ def to_hms(seconds: int) -> list:
     [1, 59, 59]
     """
     # Type your code below
-    pass
-
+    if type(seconds) ==int and seconds > 0 :
+      lists = []
+      minutes, seconds = divmod(seconds,60)
+      hours, minutes = divmod(minutes,60)
+      lists.append(hours)
+      lists.append(minutes)
+      lists.append(seconds)
+      return lists
+    else:
+      print("Unsupported input type.")
